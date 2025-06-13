@@ -1,0 +1,33 @@
+/*  
+Styles for:-- Article Preview React Application 
+File - App.css 
+Author: Chisom Okoye
+Date: 12th June 2025
+Version: v1.0
+*/
+
+/* Root Element Styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Utility Styles */
+.container {
+  width: 88%; /* Adjust as needed */
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Responsive Styles */
+/* For screen bigger than 680px */
+
