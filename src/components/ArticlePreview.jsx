@@ -10,13 +10,11 @@ function ArticlePreview() {
             </div>
             <div className="article-content">
             <h2 className="article-title">Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home</h2>
+                touches to furniture in your home</h2>
 
-  <p className="article-content-text">Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.</p>
-
-            </div>
+            <p className="article-content-text">Ever been in a room and felt like something was missing? Perhaps 
+                it felt slightly bare and uninviting. I’ve got some simple tips 
+                to help you make any room feel complete.</p>
             <div className="article-footer">
                 <div className="article-author">
                     <img src="" alt="" />
@@ -26,6 +24,7 @@ function ArticlePreview() {
                     </div>
                 </div>
                 <button>Share</button>
+            </div>
             </div>
         </div>
     );
