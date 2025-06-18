@@ -17,6 +17,11 @@ Version: v1.0
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
+.article-image {
+    width: 100%;
+    height: 23rem;
+}
+
 .article-image img {
     width: 100%;
     height: 23rem;
@@ -27,8 +32,53 @@ Version: v1.0
 .article-content {
     padding: 3rem 2rem 2rem 2rem;
     background-color: var(--white);
+    text-align: left;
+}
+
+.article-title {
+    font-weight: bold
 }
 
 .article-content-text {
-    padding: 1rem;
+    padding: 1rem 0;
+}
+
+.article-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-author-image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.article-author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0.5rem 0 0 0;
+    margin-left: -7rem;
+}
+
+.article-author-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.article-author-date {
+    color: var(--light-text-color);
+    padding-top: 0.2rem;
+}
+
+.article-share-icon {
+    width: 2.5rem;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    padding: 0.65rem;
+    cursor: pointer;
 }

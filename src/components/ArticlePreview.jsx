@@ -1,6 +1,8 @@
 import React from "react";
 import "./ArticlePreview.css";
 import articleImage from "../assets/drawers.jpg";
+import articleAuthorImage from "../assets/avatar-michelle.jpg";
+import shareIcon from "../assets/icon-share.svg";
 
 function ArticlePreview() {
     return (
@@ -17,13 +19,13 @@ function ArticlePreview() {
                 to help you make any room feel complete.</p>
             <div className="article-footer">
                 <div className="article-author">
-                    <img src="" alt="" />
+                    <img className="article-author-image" src={articleAuthorImage} alt="Article Author" />
                     <div className="article-author-info">
-                        <h2>Michelle Appleton</h2>
-                        <p>28 Jun 2020</p>
+                        <h2 className="article-author-name">Michelle Appleton</h2>
+                        <p className="article-author-date">28 Jun 2020</p>
                     </div>
+                    <img className="article-share-icon" src={shareIcon} alt="Share" />
                 </div>
-                <button>Share</button>
             </div>
             </div>
         </div>
