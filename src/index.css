@@ -48,7 +48,7 @@ Version: v1.0
 --space-xl: 3rem;
  
 /* Border Radius */
---border-radius: 0.625rem;
+--border-radius: 0.65rem;
  
 /* Breakpoints */
 --breakpoint-sm: 576px;
