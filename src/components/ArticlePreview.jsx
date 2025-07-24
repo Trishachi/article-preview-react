@@ -3,6 +3,9 @@ import "./ArticlePreview.css";
 import articleImage from "../assets/drawers.jpg";
 import articleAuthorImage from "../assets/avatar-michelle.jpg";
 import shareIcon from "../assets/icon-share.svg";
+import twitterIcon from "../assets/icon-twitter.svg";
+import facebookIcon from "../assets/icon-facebook.svg";
+import pinterestIcon from "../assets/icon-pinterest.svg";
 
 const article = {
     title: "Shift the overall look and feel by adding these wonderful touches to furniture in your home",
@@ -28,7 +31,17 @@ function ArticlePreview() {
                         <h2 className="article-author-name">{article.author}</h2>
                         <p className="article-author-date">{article.date}</p>
                     </div>
-                    <img className="article-share-icon" src={shareIcon} alt="Share" />
+                    <div className="article-share tooltip">
+                        <img className="article-share-icon" src={shareIcon} alt="Share" />
+                        <span className="tooltiptext">
+                            SHARE
+                            <div className="social-icons">
+                                <img src={twitterIcon} alt="Twitter" className="social-icon" />
+                                <img src={facebookIcon} alt="Facebook" className="social-icon" />
+                                <img src={pinterestIcon} alt="Pinterest" className="social-icon" />
+                            </div>
+                        </span>
+                    </div>
                 </div>
             </div>
             </div>
