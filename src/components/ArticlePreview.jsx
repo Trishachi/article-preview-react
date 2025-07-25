@@ -15,6 +15,14 @@ const article = {
 }
 
 function ArticlePreview() {
+    const closeMobileShareBar = () => {
+        console.log("Mobile Share Bar Closed");
+        document.querySelector(".mobile-socials-share").style.display = "none";
+    }
+    const openMobileShareBar = () => {
+        console.log("Mobile Share Bar Opened");
+        document.querySelector(".mobile-socials-share").style.display = "flex";
+    }
     return (
         <div className="article-preview-wrapper">
             <div className="article-image">
@@ -32,7 +40,7 @@ function ArticlePreview() {
                         <p className="article-author-date">{article.date}</p>
                     </div>
                     <div className="article-share tooltip">
-                        <img className="article-share-icon" src={shareIcon} alt="Share" />
+                        <img className="article-share-icon" src={shareIcon} alt="Share" onClick={openMobileShareBar} />
                         {/* <span className="tooltiptext">
                             SHARE
                             <div className="social-icons">
@@ -50,8 +58,8 @@ function ArticlePreview() {
                         <img src={twitterIcon} alt="Twitter" className="social-icon" />
                         <img src={pinterestIcon} alt="Pinterest" className="social-icon" />
                     </div>
-                    <img className="article-share-icon-mobile-active" src={shareIcon} alt="Share" />
-                    
+                    <img className="article-share-icon-mobile-active" src={shareIcon} alt="Share" onClick={closeMobileShareBar} />
+                   
                 </div>
             </div>
             </div>
