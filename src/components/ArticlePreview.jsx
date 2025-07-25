@@ -33,15 +33,25 @@ function ArticlePreview() {
                     </div>
                     <div className="article-share tooltip">
                         <img className="article-share-icon" src={shareIcon} alt="Share" />
-                        <span className="tooltiptext">
+                        {/* <span className="tooltiptext">
                             SHARE
                             <div className="social-icons">
                                 <img src={twitterIcon} alt="Twitter" className="social-icon" />
                                 <img src={facebookIcon} alt="Facebook" className="social-icon" />
                                 <img src={pinterestIcon} alt="Pinterest" className="social-icon" />
                             </div>
-                        </span>
+                        </span> */}
                     </div>
+                </div>
+                <div className="mobile-socials-share">
+                    <span className="mobile-socials-share-text">SHARE</span>
+                    <div className="social-icons">
+                    <img src={facebookIcon} alt="Facebook" className="social-icon" />
+                        <img src={twitterIcon} alt="Twitter" className="social-icon" />
+                        <img src={pinterestIcon} alt="Pinterest" className="social-icon" />
+                    </div>
+                    <img className="article-share-icon-mobile-active" src={shareIcon} alt="Share" />
+                    
                 </div>
             </div>
             </div>
