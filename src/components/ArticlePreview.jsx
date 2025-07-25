@@ -16,12 +16,16 @@ const article = {
 
 function ArticlePreview() {
     const closeMobileShareBar = () => {
-        console.log("Mobile Share Bar Closed");
         document.querySelector(".mobile-socials-share").style.display = "none";
     }
     const openMobileShareBar = () => {
-        console.log("Mobile Share Bar Opened");
-        document.querySelector(".mobile-socials-share").style.display = "flex";
+        // Only open share bar on mobile screens (≤ 680px)
+        if (window.innerWidth <= 680) {
+            console.log("Mobile Share Bar Opened");
+            document.querySelector(".mobile-socials-share").style.display = "flex";
+        } else {
+            console.log("Share bar not opened - screen too wide");
+        }
     }
     return (
         <div className="article-preview-wrapper">
