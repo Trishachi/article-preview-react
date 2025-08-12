@@ -15,18 +15,19 @@ const article = {
 }
 
 function ArticlePreview() {
-    const closeMobileShareBar = () => {
-        document.querySelector(".mobile-socials-share").style.display = "none";
-    }
-    const openMobileShareBar = () => {
-        // Only open share bar on mobile screens (≤ 680px)
-        if (window.innerWidth <= 680) {
-            console.log("Mobile Share Bar Opened");
-            document.querySelector(".mobile-socials-share").style.display = "flex";
+    const [isTooltipVisible, setIsTooltipVisible] = React.useState(false);
+    const [isMobileShareBarVisible, setIsMobileShareBarVisible] = React.useState(false);
+
+    const handleShareClick = () => {
+        const isMobile = window.innerWidth <= 680;
+        
+        if (isMobile) {
+            setIsMobileShareBarVisible(!isMobileShareBarVisible);
         } else {
-            console.log("Share bar not opened - screen too wide");
+            setIsTooltipVisible(!isTooltipVisible);
         }
     }
+
     return (
         <div className="article-preview-wrapper">
             <div className="article-image">
@@ -44,25 +45,27 @@ function ArticlePreview() {
                         <p className="article-author-date">{article.date}</p>
                     </div>
                     <div className="article-share tooltip">
-                        <img className="article-share-icon" src={shareIcon} alt="Share" onClick={openMobileShareBar} />
-                        {/* <span className="tooltiptext">
+                        <img className="article-share-icon" src={shareIcon} alt="Share" onClick={handleShareClick} />
+
+                        {/* Tooltip on Desktop*/}
+                        <span className="tooltiptext" style={{ display: isTooltipVisible ? 'flex' : 'none' }}>
                             SHARE
-                            <div className="social-icons">
-                                <img src={twitterIcon} alt="Twitter" className="social-icon" />
-                                <img src={facebookIcon} alt="Facebook" className="social-icon" />
-                                <img src={pinterestIcon} alt="Pinterest" className="social-icon" />
+                            <div className="social-icons-desktop">
+                               <img src={facebookIcon} alt="Facebook" className="social-icon-desktop" />
+                               <img src={twitterIcon} alt="Twitter" className="social-icon-desktop" />
+                               <img src={pinterestIcon} alt="Pinterest" className="social-icon-desktop" />
                             </div>
-                        </span> */}
+                        </span>
                     </div>
                 </div>
-                <div className="mobile-socials-share">
+                <div className="mobile-socials-share" style={{ display: isMobileShareBarVisible ? 'flex' : 'none' }}>
                     <span className="mobile-socials-share-text">SHARE</span>
-                    <div className="social-icons">
-                    <img src={facebookIcon} alt="Facebook" className="social-icon" />
-                        <img src={twitterIcon} alt="Twitter" className="social-icon" />
-                        <img src={pinterestIcon} alt="Pinterest" className="social-icon" />
+                    <div className="social-icons-mobile">
+                        <img src={facebookIcon} alt="Facebook" className="social-icon-mobile" />
+                        <img src={twitterIcon} alt="Twitter" className="social-icon-mobile" />
+                        <img src={pinterestIcon} alt="Pinterest" className="social-icon-mobile" />
                     </div>
-                    <img className="article-share-icon-mobile-active" src={shareIcon} alt="Share" onClick={closeMobileShareBar} />
+                    <img className="article-share-icon-mobile-active" src={shareIcon} alt="Share" onClick={handleShareClick} />
                    
                 </div>
             </div>

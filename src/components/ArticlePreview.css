@@ -13,8 +13,7 @@ Version: v1.0
     justify-content: center;
     background-color: var(--white);
     border: 1px solid #dee2e6;
-    border-radius: var(--border-radius);
-    overflow: hidden;
+    border-radius: var(--border-radius);   
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -22,17 +21,19 @@ Version: v1.0
 .article-image {
     width: 100%;
     height: 20rem;
+    overflow: hidden;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
 }
 
 .article-image img {
     width: 100%;
     height: 23rem;
-    object-fit: cover;
+    object-fit: cover;    
 }
 
 .article-content {
     padding: 3rem 2rem 2rem 2rem;
-    background-color: var(--white);
     text-align: left;
 }
 
@@ -49,11 +50,8 @@ Version: v1.0
 }
 
 .article-author {
-    /* Temp */
-    /* display: none; */
     display: flex;
-    align-items: center;
-    /* padding-top: 1rem; */
+    align-items: center;  
 }
 
 .article-author-image {
@@ -108,17 +106,24 @@ Version: v1.0
     bottom: 0;
     left: 0;
     right: 0;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .mobile-socials-share-text {
     padding-left: 1rem;
     letter-spacing: 5px;
-    font-weight: lighter;
-    
+    font-weight: lighter;    
 }
 
-.social-icon {
+.social-icon-mobile{
     padding: 0 0.5rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.social-icon-mobile:hover {
+    opacity: 0.8;
 }
 
 .article-share-icon-mobile-active {
@@ -131,71 +136,9 @@ Version: v1.0
     margin-right: 1rem;
 }
 
-
-/* .tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: auto;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 12px;
-    position: absolute;
-    z-index: 1;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 12px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 8px;
-}
-
-.social-icon {
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.social-icon:hover {
-    opacity: 0.8;
-}
-
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: var(--primary-color) transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-} */
-
 /* Responsive Styles */
 /* For screen bigger than 680px */
 @media (min-width: 680px) {
-
     body {
         display: flex;
         justify-content: center;
@@ -205,10 +148,75 @@ Version: v1.0
     .article-preview-wrapper {
         max-width: 780px;
         flex-direction: row;
+        overflow: visible;
+    }
+
+    .article-image {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--border-radius);
+        border-bottom-right-radius: 0;
     }
 
     .mobile-socials-share {
         display: none;
     }
+
+    /* Styles Tooltip on Desktop */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+        display: none;
+        width: auto;
+        background-color: var(--primary-color);
+        color: var(--white);
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px 25px;
+        position: absolute;
+        z-index: 1;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: opacity 0.3s;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .social-icons-desktop {
+        display: flex;
+        gap: 8px;       
+    }
+
+    .social-icon-desktop {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+    
+    .social-icon-desktop:hover {
+        opacity: 0.8;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: var(--primary-color) transparent transparent transparent;
+    }
+    /* End of Styles Tooltip on Desktop */
 }
 
