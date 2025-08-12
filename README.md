@@ -1,12 +1,35 @@
-# React + Vite
+# Frontend Mentor - Article preview component solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+### The challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users should be able to:
 
-## Expanding the ESLint configuration
+- View the optimal layout for the component depending on their device's screen size
+- See the social media share links when they click the share icon
+- Build out the project to the designs provided
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Screenshot
+
+![Screenshot](./src/assets/Screenshot.jpg)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom variables
+- Flexbox
+- Mobile-first workflow - Media Queries
+- [React](https://reactjs.org/) - JS library
+
+
+### Live Project
+
+[View Live Project](https://github.com/Trishachi/article-preview-react)
+
+### Source Code
+
+[View Source Code](https://github.com/Trishachi/article-preview-react)
+
+
+
