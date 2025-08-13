@@ -40,24 +40,24 @@ Users should be able to:
 4. Open the vite.config.js file in your project and add a field base to the export default using the command:
 ```base: '/[repository-name]/'```
 5. Update package.json files with the following:
-```{
-    "homepage": "[repository url]"
-    .......
+```{"homepage": "[repository url]",
+    ...
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
-        ......
+        ... 
     },
 }```
-6. Create the dist folder by running the following command in your terminal 
+6. Create the dist folder by running the following command in your terminal:
+```bash
+npm run build
+```
 
-    ```npm run build```
-    
-7. Push you react app to your GitHub Repository
-8. Deploy your application with the command 
-
-    ```npm run deploy```
-    
+7. Push your React app to your GitHub Repository
+8. Deploy your application with the command:
+```bash
+npm run deploy
+```
 9. On the project repository on GitHub, navigate to Settings -> Pages
 10. Select gh-pages under the Build and Deploy section
 Refresh page and follow site link to view site.
