@@ -40,14 +40,16 @@ Users should be able to:
 4. Open the vite.config.js file in your project and add a field base to the export default using the command:
 ```base: '/[repository-name]/'```
 5. Update package.json files with the following:
-```{"homepage": "[repository url]",
+```bash {
+    "homepage": "[repository url]",
     ...
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
         ... 
     },
-}```
+}
+```
 6. Create the dist folder by running the following command in your terminal:
 ```bash
 npm run build
@@ -60,11 +62,11 @@ npm run deploy
 ```
 9. On the project repository on GitHub, navigate to Settings -> Pages
 10. Select gh-pages under the Build and Deploy section
-Refresh page and follow site link to view site.
+11. Refresh page and follow site link to view site.
 
 ## Author
 
-- Website - [Chisom Okoye](https://trishachi.github.io/)
-- Frontend Mentor - [@Trishachi](https://www.frontendmentor.io/profile/Trishachi)
-- LinkedIn - [@chisom-trisha-okoye](https://www.linkedin.com/in/chisom-trisha-okoye/)
+- [My Portfolio](https://trishachi.github.io/)
+- [Frontend Mentor Profile](https://www.frontendmentor.io/profile/Trishachi)
+- [LinkedIn Profile](https://www.linkedin.com/in/chisom-trisha-okoye/)
 
